@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><p>Well Come to Rock Paper Scissor</p></header>
+    <div class="inputDiv">
+        <input class="input" type="text" value="" placeholder="Enter a choice" autofocus>
+       
+        <button id="play">Play</button>
+    </div>
+    <div class="output">
+        <p id="resultP"></p>
+        <button id="clear">Clear</button>
+
+
+    </div>
+
+    <footer><h3>&copy copyright reserved by Madan</h3></footer>
+
+  
+
+    <!-- <script>
+        let arr = [ "rock","paper","scissor"];
+        function botChoise(){
+
+            let index = Math.floor(Math.random()*3);
+            let botSelect = arr[index];
+            
+            return botSelect;
+        }
+
+      
+    
+        
+        const playBtn = document.querySelector('#play');
+        const resultDiv = document.querySelector('#resultP');
+        const output = document.querySelector('.output');
+
+        
+
+
+        const playGame = ()=>{
+            let input = document.querySelector('.input');
+           
+            let inputValue = input.value;
+            let inputV = inputValue.toLowerCase();
+            inputV = inputV.trim();
+            
+            
+            let bot = botChoise();
+            if(inputV =="")
+            {
+                resultDiv.innerHTML = `Please enter valid input`;
+                return;
+            }
+            if(bot === inputV){
+                resultDiv.innerHTML = `Match Tie Bot select ${bot} you select ${inputV}`;
+            }
+            else if(bot === 'rock' && inputV === 'scissor'){
+                resultDiv.innerHTML = `You lose Bot select ${bot} you select ${inputV}`;
+            }
+            else if(bot === "scissor" && inputV === "paper"){
+                resultDiv.innerHTML = `You lose Bot select ${bot} you select ${inputV}`;
+            }
+            else if(bot === "rock" && inputV === "paper"){
+                resultDiv.innerHTML = `You Won Bot select ${bot} you select ${inputV}`;
+            }
+            else if(bot === "paper" && inputV === "rock"){
+                resultDiv.innerHTML = `You Lose Bot select ${bot} you select ${inputV}`;
+            }
+            else if(bot === "paper" && inputV === "scissor"){
+                resultDiv.innerHTML = `You Won Bot select ${bot} you select ${inputV}`;
+            }
+            else if(bot === "scissor" && inputV === "rock"){
+                resultDiv.innerHTML = `You Won Bot select ${bot} you select ${inputV}`;
+            }
+            else{
+                resultDiv.innerHTML = `Invalid input ${bot} you select ${inputV}`;
+            }
+        }
+      
+      document.onkeypress = function(e){
+               
+        let key = e.which;
+        
+        if(key === 13){
+             
+            playGame();
+            
+        }
+      }
+
+        playBtn.addEventListener('click',()=>{
+            output.style.display="block";
+            playGame();
+            
+        }) 
+
+        const clearBtn = document.querySelector('#clear');
+        clearBtn.onclick = function(){
+            output.style.display = "none";
+        }
+        
+    </script> -->
+    <script src="script.js"></script>
+</body>
+</html>
